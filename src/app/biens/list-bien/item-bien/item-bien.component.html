@@ -1,0 +1,11 @@
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{fisProperty.image}}" alt="Card image ">
+  <div class="card-body text-center">
+    <h5 class="card-title">{{fisProperty.title}}</h5>
+    <p class="card-text">{{fisProperty.description | summarize: 50}}</p>
+    <hr>
+    <a [routerLink]="['/biens/',fisProperty.id]"><span class="float-left btn btn-outline-danger  btn-sm">Reserve</span></a>
+    <span class="btn btn-sm text-center disabled">{{fisProperty.createdAt | timeleft}}</span>
+    <a href="#" class="btn btn-outline-primary float-right">{{fisProperty.sale}}</a>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<label>
+  <input type="text" [(ngModel)]="search">
+</label>
+<hr>
+<div class="row">
+  <app-item-bien [fisProperty]="bien" *ngFor="let bien of biens | filter: search:'title'" class="col-sm-4 mb-4"></app-item-bien>
+</div>
+
+
